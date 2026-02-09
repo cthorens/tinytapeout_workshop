@@ -9,11 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+VGA Checkers example with a few modifications in the shape, speed and colors. Inputs to change colors.
 
 ## How to test
 
-Explain how to use your project
+Plug VGA and observe I guess
+
 
 ## External hardware
 
