@@ -7,7 +7,7 @@
 `default_nettype none
 
 module tt_um_cthorens_cpu(
-	input i_CLK,
+	input clk,
 	output [7:0] o_REG3
 );
 
@@ -63,7 +63,7 @@ end
 
 assign low_pc_rel = PC[3:0] + instr[7:4];
 
-always @(posedge i_CLK)
+always @(posedge clk)
 begin
 	if(instr[3:0] == 4'b0001) begin
 		PC <= { PC[7:4], low_pc_rel };

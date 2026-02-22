@@ -19,7 +19,7 @@ module tb ();
 
   // Replace tt_um_example with your module name:
   tt_um_cthorens_cpu user_project (
-      .i_CLK    (clk),      // clock
+      .clk      (clk),      // clock
       .o_REG3   (w_reg3)
   );
 
