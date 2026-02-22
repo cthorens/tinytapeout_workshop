@@ -67,12 +67,22 @@ initial begin
   PC = 8'b00000000;
 end
 
+// Unused outputs assigned to 0.
+assign uio_out = 0;
+assign uio_oe  = 0;
+
+// Suppress unused signals warning
+wire _unused_ok = &{ena, ui_in, uio_in};
+
 assign low_pc_rel = PC[3:0] + instr[7:4];
 
 always @(posedge clk)
 begin
   if(instr[3:0] == 4'b0001) begin
     PC <= { PC[7:4], low_pc_rel };
+  end
+  else if(~rst_n) begin
+    PC <= 0;
   end
   else begin
     PC <= PC+1;
