@@ -18,7 +18,7 @@ module tb ();
   wire [7:0] w_reg3;
 
   // Replace tt_um_example with your module name:
-  tt_um_cthorens_vgatest user_project (
+  tt_um_cthorens_cpu user_project (
       .i_CLK    (clk),      // clock
       .o_REG3   (w_reg3)
   );
